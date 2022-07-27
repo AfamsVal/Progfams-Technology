@@ -1,13 +1,427 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-100: rgb(215, 107, 0);
+}
+
+a {
+  text-decoration: none;
+}
+.bg-dark-100{
+  background-color: #293340;
+}
+.text-lighter{
+  color: #bbb;
+}
+.text-bold{
+  font-weight: 700;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.border-radius-10{
+  border-radius: 10px;
+}
+.course-card {
+  margin-block: 10px;
+  border-radius: 10px;
+}
+.text-justify {
+  text-align: justify;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-left{
+text-align: left;
+}
+.font-weight-bold {
+  font-weight: bold;
+}
+.font-16 {
+  font-size: 1.5rem !important;
+}
+.font-18 {
+  font-size: 2rem !important;
+}
+.font-14{
+  font-size: 1rem !important;
+}
+
+.wrapper {
+  background-color: #0e1924;
+}
+.learn {
+  padding-top: 6em;
+}
+.learn,
+p {
+  font-size: 20px;
+}
+
+.come {
+  width: 343.71px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #425266;
+  color: white;
+}
+.get {
+  color: white;
+  background-color: var(--primary-100);
+  width: 230px;
+  height: 60px;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.get:hover {
+  background-color: black;
+  transition: all 200ms ease-in-out;
+}
+.box {
+  background-color: rgb(253, 211, 103);
+  border-radius: 10px;
+}
+.trend {
+  width: 98px;
+  height: 35px;
+  background-color: var(--primary-100);
+  color: white;
+  border-radius: 17px;
+  padding-top: 5px;
+  text-align: center;
+}
+.but {
+  background-color: var(--primary-100);
+  border-radius: 7px;
+  color: white;
+  border: none;
+}
+
+.digital {
+  background-color: #2d33b3;
+}
+.frontend {
+  background-color: var(--primary-100);
+}
+.backend {
+  background-color: #00c69a;
+}
+.ui-ux {
+  background-color: #425266;
+}
+.mobile-app {
+  background-color: #62c3ff;
+}
+.coding-kids {
+  background-color: #6633cc;
+}
+.goes {
+  background: linear-gradient(
+      rgb(102, 0, 204, 0.7),
+      rgb(153, 51, 255, 0.7),
+      rgb(102, 102, 255, 0.7)
+    ),
+    url(../src/asset/images/dark.webp) no-repeat center center / cover;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+}
+
+.mt-10 {
+  margin-top: 120px;
+}
+
+/* //small phones */
+@media (min-width: 576px) {
+  .goes {
+    height: 100%;
+  }
+  .mt-10 {
+    margin-top: 50px;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .goes {
+    height: 620px;
+    line-height: 20px;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .goes {
+    height: 620px;
+  }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .goes {
+    height: 570px;
+  }
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .goes {
+    height: 500px;
+  }
+}
+
+.side {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.8);
+  color: black;
+  text-align: center;
+}
+.picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url(../src/asset/images/val.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+  margin-top: 25px;
+}
+.course-card-img {
+  height: 150px;
+  max-width: 150px;
+  overflow: hidden;
+}
+.course-card-border {
+  border-bottom: 1px solid#00c69a;
+ 
+}
+.purple {
+  color: #9966ff;
+}
+.now {
+  width: 7em;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid white;
+  background-color: none;
+  color: white;
+}
+.raw {
+  /* width: 300px ;
+    height: 150px; */
+  /* padding: 10px; */
+  border-radius: 10px;
+  background-color: #0a121a;
+}
+.view {
+  width: 150px;
+  height: 50px;
+  background-color: #1e354d;
+  border-radius: 7px;
+  color: white;
+  border: none;
+  padding-top: 10px;
+  text-decoration: none;
+  text-align: center;
+  /* margin-top: 50px; */
+}
+.coll {
+  background-color: #425266;
+  color: white;
+  border-radius: 10px;
+}
+.discount {
+  background-color: #f9bb2b;
+  border-radius: 10px;
+}
+.trend {
+  width: 98px;
+  height: 35px;
+  background-color: #000000;
+  color: white;
+  border-radius: 17px;
+  padding-top: 5px;
+  text-align: center;
+}
+.build {
+  background-color: #00cc76;
+  color: black;
+  border-radius: 10px;
+}
+.builde {
+  background-color: #fff3aa;
+  color: black;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.view2 {
+  width: 150px;
+  height: 50px;
+  background-color: #6633cc;
+  border-radius: 7px;
+  color: white;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 10px;
+}
+.boxe {
+  background-color: #62c3ff;
+  border-radius: 10px;
+}
+.check {
+  width: 250px;
+  height: 70px;
+  background-color: #6633cc;
+  border-radius: 7px;
+  color: white;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.nav-spacing {
+  margin-right: 20px !important;
+}
+.hub {
+  background-color: #999;
+  border-radius: 10px;
+}
+.sponsor {
+  max-width: 140px;
+  height: 100px;
+  padding: 2px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.roll {
+  border-radius: 10px;
+  background-color: #293340;
+  min-height: 230px;
+  color: white;
+}
+.testimony-box {
+  height: 70px;
+  width: 70px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.text-grey {
+  color: #cccccc;
+}
+.more {
+  text-decoration: none;
+  color: white;
+}
+.more:hover {
+  color: purple;
+}
+.footer {
+  background-color: #10141a;
+}
+.app {
+  color: white;
+  font-size: 15px;
+}
+.app2 {
+  text-decoration: none;
+}
+.auth-wrapper {
+  background-color: rgb(17, 20, 39);
+  color: white;
+  margin: auto;
+  text-align: center;
+  min-height: 100vh;
+}
+form {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.apple {
+  width: 100%;
+  height: 50px;
+  background-color: grey;
+  border-radius: 5px;
+  color: white;
+  padding-top: 15px;
+  text-decoration: none;
+}
+
+.mt-6 {
+  margin-top: 100px;
+}
+
+.my-6 {
+  margin-block: 100px;
+}
+
+
+
+/* ///////////////// */
+/* ///////////////// */
+
+.card-blog {
+  border-radius: 0.28571429rem;
+  box-shadow: 3px 3px 2px #444;
+  background-color: transparent;
+  border: 1px solid var(--primary-100);
+}
+.card-blog .card-footer {
+  border-color: var(--primary-100) !important;
+}
+
+.auth-input {
+  background-color: transparent;
+}
+
+/* somto css ends here */
+
+/* Style the list */
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+ 
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 14px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: #8899a9;
+  content: "\003E";
+  
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
 }
